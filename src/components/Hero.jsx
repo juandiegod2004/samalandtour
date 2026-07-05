@@ -37,7 +37,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative h-screen flex items-center pt-20 overflow-hidden" id="inicio">
+    <section className="relative min-h-screen md:h-screen flex items-center pt-28 md:pt-20 pb-16 md:pb-0 overflow-hidden" id="inicio">
       {/* Full HD Background Video / Mobile Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video 
@@ -56,9 +56,9 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-neutral via-neutral/85 to-transparent" />
       </div>
       
-      <div className="max-w-[1440px] mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col md:flex-row justify-between items-center gap-12 pt-8 md:pt-0">
         {/* Left Side Content */}
-        <div className="w-full md:w-1/2 space-y-8 text-white">
+        <div className="w-full md:w-1/2 space-y-6 md:space-y-8 text-white">
           <span className="inline-block border border-secondary/40 text-secondary text-xs font-body font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full bg-secondary/5">
             Naturaleza Pura & Exclusividad
           </span>
@@ -86,7 +86,7 @@ export default function Hero() {
           </div>
 
           {/* Tags Pills List */}
-          <div className="flex flex-wrap gap-2 pt-6">
+          <div className="flex flex-wrap gap-2 pt-4 md:pt-6">
             {tags.map((tag, idx) => (
               <span 
                 key={idx}
