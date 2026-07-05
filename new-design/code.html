@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rio Imperio Tourism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#0f0f11',
+            'brand-gray': '#1c1c1f',
+            'brand-light-gray': '#2a2a2e',
+            'brand-gold': '#d4af37',
+            'brand-green': '#10b981',
+            'brand-offwhite': '#f3f4f6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-styles">
+    body {
+      background-color: #0f0f11;
+      color: #f3f4f6;
+    }
+    .text-gold {
+      color: #d4af37;
+    }
+    .bg-dark-section {
+      background-color: #1c1c1f;
+    }
+    .card-gradient {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    }
+    .testimonial-card {
+      background-color: #1c1c1f;
+      border: 1px solid #2a2a2e;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-200">
+<!-- BEGIN: Header/Nav -->
+<header class="fixed w-full z-50 transition-all duration-300 bg-black/50 backdrop-blur-sm px-6 py-4">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="text-2xl font-bold text-white tracking-tighter">RIO IMPERIO</span>
+</div>
+<nav class="hidden md:flex space-x-8 text-sm font-medium">
+<a class="text-white hover:text-brand-gold transition" href="#">Transfers</a>
+<a class="text-white hover:text-brand-gold transition" href="#">Tours</a>
+<a class="text-white hover:text-brand-gold transition" href="#">Who we are</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-white hover:text-brand-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button class="text-white hover:text-brand-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<div class="text-white text-sm font-medium border border-gray-600 rounded-full px-3 py-1 cursor-pointer hover:bg-gray-800 transition">EN PT ES</div>
+</div>
+</div>
+</header>
+<!-- END: Header/Nav -->
+<!-- BEGIN: Hero Section -->
+<section class="relative h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/111/333?text=Rio+Hero+Image')] bg-cover bg-center bg-no-repeat opacity-40"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col md:flex-row justify-between items-center">
+<div class="w-full md:w-1/2 space-y-8">
+<h1 class="text-5xl md:text-7xl font-display font-bold leading-tight">
+          Discover <span class="text-brand-gold">RIO</span> with<br/>Us
+        </h1>
+<button class="bg-brand-gold text-black font-semibold px-8 py-3 rounded-full hover:bg-yellow-500 transition duration-300 flex items-center space-x-2">
+<span>View Tours</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="flex flex-wrap gap-3 pt-12">
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Adventure</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Rio de Janeiro</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Buzios</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Arraial</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Transfers</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">City tours</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Beach Tours</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Exhaust</span>
+<span class="px-4 py-1.5 border border-gray-700 rounded-full text-xs text-gray-300 hover:border-brand-gold cursor-pointer transition">Discover</span>
+</div>
+</div>
+<div class="w-full md:w-5/12 mt-12 md:mt-0 bg-black/60 p-8 rounded-2xl backdrop-blur-sm border border-gray-800">
+<h2 class="text-2xl font-bold mb-4">Tours and Experiences in <span class="text-brand-gold">Rio de Janeiro!</span></h2>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+          With the goal of helping others discover Rio de Janeiro, we created Rio Imperio Turismo in 2017. Today, with a team of over 15 people taking care of every detail, we have established ourselves as a travel agency that stands out for its excellent customer service; we inspire confidence, provide respect, and offer support to the hundreds of travelers who contact us every day.
+        </p>
+<div class="flex items-center space-x-4">
+<div class="flex -space-x-3">
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHesXAvi5mQssjzTRcIcYaKyLLMfHqen9BxFDaNvt8DKxLPTxRr3R_mQD-lXS-VaHkLZj5pwh4KgoUbpU_UuSXnqqCz5n0Vgv6Jd9_potiIux6r2zsblksX3Wm2Nr8_h6Z2FxFkICpoxN4xanpvHIzbYRcpUqc-OK806KGPunQFiKPOEt8sKq_9GLuJfoswE6OXzxhuHgUdhDo_NrUFi2MJYSsW8pq0u-Cw8vyOyO1KnDceu5RivX-GZyKgEHw9PKzIlvSZV0ttv0"/>
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1CxEcE2dIYQkK8TNEeXAYpKHmzE_dqUIbI9matvfRIGN34VZsajpwiUmzDMs3FnTMzZWD6dBV5bfaG4YuexPusTKHPuOEcD_1V8htOGc38aDOowWUE80UJFoXQXyikZMxxJdNeW7QNzR1Palz0XvyMJi5dJthF88caSyBTLBFYQ6d7p5GeizNockTcawkmAe_id9H7BwXIrJeJs0dH2-tyMX9fqsT_4l0QQke2M5hesIf7wvJKURvbay6_eRnWsHTIsoLqzhbEBQ"/>
+<img alt="Customer" class="w-10 h-10 rounded-full border-2 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfBoRPWY3yQhHMnbPujlzSjK2C1bQJJbweaVTggzIdeu8XtQz91Ff7KXua357W0xI8P07tVwIE9_l3u6ti2JEUF367PY3cRRR6blcb7y8A3YOC3iazz8luV6YzROIVrq8Y_uAcPNy_c7MbdJ4ivS5GnVxRXd5LtgTcw4HCZNQNlJylK-Bq-AU-XtweXmQoMQDTiHO_NIC1XWCrAP5CwWuQDQvO9vuCkkGTSEzU400LXRd_agXuw1-eoaY15NrA2kAfIA_HmINjPUA"/>
+</div>
+<div>
+<div class="font-bold text-sm">+10,000</div>
+<div class="text-xs text-gray-400">Happy Customers</div>
+<a class="text-xs text-brand-gold hover:underline" href="#">See reviews</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Stats Section -->
+<section class="bg-brand-gray py-12 border-y border-gray-800">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left divide-x divide-gray-800">
+<div class="pl-0 md:pl-8">
+<h3 class="text-2xl font-display text-gray-400">Our <span class="text-white font-bold">Numbers</span><br/>They speak</h3>
+</div>
+<div class="px-4">
+<div class="text-4xl font-bold text-white mb-1">1,000+</div>
+<div class="text-sm text-gray-400">Completed Tours</div>
+</div>
+<div class="px-4">
+<div class="text-4xl font-bold text-white mb-1">10k+</div>
+<div class="text-sm text-gray-400">Happy travelers</div>
+</div>
+<div class="px-4">
+<div class="text-4xl font-bold text-white mb-1">9.8%</div>
+<div class="text-sm text-gray-400">positive reviews</div>
+</div>
+</div>
+</section>
+<!-- END: Stats Section -->
+<!-- BEGIN: Best Experiences Section -->
+<section class="py-20 bg-brand-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12">
+<div class="flex items-center space-x-4">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700">
+<img alt="Maracana Stadium" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvxefd8k44gtbKRaP2ZfGK72sElJtf0Ckk2jpeW-Cp5J9xFtOXJnT2F92uKh4hewnwZxqWEaWK-PodiUjDUOrDFOhi51JfAPDteGx4jjFAFgxON-fJXcEIwxPL77UMSEfszBboFTT8mCa3F3Dm8lLWOe7EqCw8NhmWq2jA2p_l_d5RRlCg_SZrWV3ld1AEFZ77M57L0JFGWhoaFiYhSVDFk_zeaflcVmm8gnMmtU7GfvzTUjZeCqXeCCoDuz29Xk77AdqN4MqJIp8"/>
+</div>
+<h2 class="text-4xl font-display font-bold">The Best <span class="text-gray-400 font-normal">Experiences</span><br/>To Do In <span class="text-brand-gold">River</span></h2>
+</div>
+<button class="mt-6 md:mt-0 px-6 py-2 border border-gray-600 rounded-full hover:bg-gray-800 transition flex items-center space-x-2 text-sm">
+<span>Book Tour Now</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Tabs -->
+<div class="flex justify-center space-x-8 border-b border-gray-800 mb-12">
+<button class="px-4 py-2 border-b-2 border-brand-gold text-brand-gold font-medium">From Rio</button>
+<button class="px-4 py-2 border-b-2 border-transparent text-gray-500 hover:text-gray-300 font-medium">From Buzios</button>
+<button class="px-4 py-2 border-b-2 border-transparent text-gray-500 hover:text-gray-300 font-medium">From Arraial</button>
+</div>
+<!-- Tour Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="relative rounded-2xl overflow-hidden h-[450px] group">
+<img alt="A Day in Rio VIP" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7fdb7pY_VcAgE7ebSMzHt7uwPMmsT2ehUm_GWFFRKthRNIHB98or-vynIkARNXyvPPstPaMNCN0j0xvV5vB-zwyDqJ3nFA1hw3nG_XA-OgCp84bSrdvDwnktJbm-S2VIb58L0_f93hmxeoM5tKN5d-zrsz6POXIK12LJA3A0Qk4n3f2O2p6yGJbaEJ6aSq3d1Ggs68GxwENmm-GjHqECtH-X65PgFS8IjPZChC1S_4PlM-9Y7PLbqG0tz6kzJ-AHvlecppZx1pcc"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<div class="text-xs text-brand-gold font-semibold uppercase tracking-wider mb-2">Christ, Rio de Janeiro</div>
+<h3 class="text-2xl font-bold mb-3">A Day in Rio VIP</h3>
+<p class="text-sm text-gray-300 mb-4 line-clamp-2">The most comprehensive tour to discover the city based on 500+ Reviews</p>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-yellow-400 text-sm">★★★★★</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-6">
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10">
+<div class="text-sm font-bold text-brand-gold">R$ 590</div>
+<div class="text-xs text-gray-400">Adults</div>
+</div>
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10">
+<div class="text-sm font-bold text-white">R$ 400</div>
+<div class="text-xs text-gray-400">5 to 10 years</div>
+</div>
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10 col-span-2">
+<div class="text-sm font-bold text-white">R$ 100</div>
+<div class="text-xs text-gray-400">3 to 4 years</div>
+</div>
+</div>
+<button class="w-full bg-white text-black font-semibold py-3 rounded-full hover:bg-gray-200 transition">Book now for free</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative rounded-2xl overflow-hidden h-[450px] group">
+<img alt="Stand Up - Sunrise" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtLDizl4T58tLTVVvcLxeKIzYQLL6vred1d_GsyoEBT4f_417c9vYrPfM7iPUUDVV_EhJxDEZhXMWZagaNAxMHuk-thM0HyBboSDKx1shyI0ISJAVTTP__Hv004Wj6sl6L-E8LvDDBdtNwvdctZ-sacrAay8kNsGNV0VwU9UhVRy7rOjKCccZUh-92CRtzv_W_f01S-w-mQjwMqhSZTFujQ0QXzCQodFQV8J8bxIxasV79EanDYT5qiT1Ef7oxQsIK39snwWayjVM"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<div class="text-xs text-brand-gold font-semibold uppercase tracking-wider mb-2">Christ, Rio de Janeiro</div>
+<h3 class="text-2xl font-bold mb-3">Stand Up - Sunrise Copacabana</h3>
+<p class="text-sm text-gray-300 mb-4 line-clamp-2">I had a unique experience paddling on the waters of Copacabana based on 500+ Reviews</p>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-yellow-400 text-sm">★★★★★</div>
+</div>
+<div class="grid grid-cols-1 gap-2 mb-6">
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10">
+<div class="text-sm font-bold text-brand-gold">R$ 180</div>
+<div class="text-xs text-gray-400">Adults</div>
+</div>
+</div>
+<button class="w-full bg-white text-black font-semibold py-3 rounded-full hover:bg-gray-200 transition">Book now for free</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative rounded-2xl overflow-hidden h-[450px] group">
+<img alt="A Day in Rio by Train" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDahd-WTre_ZaU8nqjq18OayKeIR7wPMxINv9OeXpRI4QJnQ1tVB-YZFUDNZ8YQoo4IL4gbQQNdBUkVbprV4E8Cb4OK7IXqxiiGS2NFzNjoKbrXVvg0ZXMZ1OD4ZO3Qb9lXVG3qgUnD1vGYLZF26emzxD0f-DY8TXW5dyRc51lPntRnwZLrTPTAf5ZCYqoGfH7qBdm5T232uVZjoogu8MoeaSdWKARHeYlBQ7fiSx4He1Iv9GjtXzPvuqeRjIS2yGjbJ3R0Y20TLhE"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<div class="text-xs text-brand-gold font-semibold uppercase tracking-wider mb-2">Christ, Rio de Janeiro</div>
+<h3 class="text-2xl font-bold mb-3">A Day in Rio by Train</h3>
+<p class="text-sm text-gray-300 mb-4 line-clamp-2">We will pick up passengers between 8:00 a.m. and ... based on 500+ Reviews</p>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-yellow-400 text-sm">★★★★★</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-6">
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10">
+<div class="text-sm font-bold text-brand-gold">R$ 550</div>
+<div class="text-xs text-gray-400">Adults</div>
+</div>
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10">
+<div class="text-sm font-bold text-white">R$ 360</div>
+<div class="text-xs text-gray-400">5 to 12 years</div>
+</div>
+<div class="bg-black/50 backdrop-blur-sm rounded p-2 text-center border border-white/10 col-span-2">
+<div class="text-sm font-bold text-white">R$ 100</div>
+<div class="text-xs text-gray-400">3 to 4 years</div>
+</div>
+</div>
+<button class="w-full bg-white text-black font-semibold py-3 rounded-full hover:bg-gray-200 transition">Book now for free</button>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<p class="text-gray-400 mb-6">How will you experience your days in the marvelous city? Elevate your Rio de Janeiro experience</p>
+<button class="px-6 py-2 border border-gray-600 rounded-full hover:bg-gray-800 transition inline-flex items-center space-x-2">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Explore more tours</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: Best Experiences Section -->
+<!-- BEGIN: Search Bar (Floating style) -->
+<section class="py-8 bg-brand-dark">
+<div class="max-w-5xl mx-auto px-6">
+<div class="bg-white rounded-full p-2 flex flex-wrap md:flex-nowrap items-center divide-x divide-gray-200 text-black shadow-lg">
+<div class="px-6 py-2 flex-1 min-w-[200px]">
+<div class="text-xs text-gray-500 font-semibold uppercase mb-1">Destination</div>
+<select class="w-full bg-transparent text-sm font-medium focus:outline-none border-none p-0 cursor-pointer">
+<option>Rio de Janeiro</option>
+</select>
+</div>
+<div class="px-6 py-2 flex-1 min-w-[200px]">
+<div class="text-xs text-gray-500 font-semibold uppercase mb-1">Activity</div>
+<select class="w-full bg-transparent text-sm font-medium focus:outline-none border-none p-0 cursor-pointer">
+<option>Adventure</option>
+</select>
+</div>
+<div class="px-6 py-2 flex-1 min-w-[200px]">
+<div class="text-xs text-gray-500 font-semibold uppercase mb-1">People</div>
+<select class="w-full bg-transparent text-sm font-medium focus:outline-none border-none p-0 cursor-pointer">
+<option>1</option>
+</select>
+</div>
+<div class="pl-4 pr-2 py-2">
+<button class="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition whitespace-nowrap">Look for</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Search Bar -->
+<!-- BEGIN: Testimonials Section -->
+<section class="py-20 bg-brand-dark border-t border-gray-800">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start mb-16">
+<h2 class="text-4xl md:text-5xl font-display font-bold leading-tight md:w-1/2">
+          Loved by <span class="text-gray-400 font-normal">Travelers,</span><br/>
+          Recommended<br/>
+<span class="text-brand-gold">Worldwide</span>
+</h2>
+<p class="text-gray-400 text-sm leading-relaxed md:w-5/12 mt-6 md:mt-0">
+          We work every day as if it were the first, knowing that we would love to meet people like us anywhere in the world, spreading joy, transmitting respect for tourism and the environment and above all, with such noble values as trust, responsibility and truth.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Column 1 -->
+<div class="space-y-6">
+<div class="testimonial-card p-6 rounded-2xl">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center font-bold">F</div>
+<div>
+<div class="font-semibold text-sm">Franco Geysels</div>
+<div class="text-xs text-gray-500">2025-03-05</div>
+</div>
+</div>
+<div class="text-yellow-400 text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-300">Excellent service, we hired 3 transfers and all 3 were very punctual, 100% reliable.</p>
+</div>
+<div class="testimonial-card p-6 rounded-2xl">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center font-bold">M</div>
+<div>
+<div class="font-semibold text-sm">Michael P</div>
+<div class="text-xs text-gray-500">2024-11-03</div>
+</div>
+</div>
+<div class="text-brand-green text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-300 font-semibold mb-1">Beautiful views.</p>
+<p class="text-sm text-gray-400">Fun time, exciting hike, and the guide was excellent. Knowledgeable and made me feel safe. I'll go again. Robinson arrived right on time.</p>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="space-y-6">
+<div class="testimonial-card p-6 rounded-2xl">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center font-bold text-white">M</div>
+<div>
+<div class="font-semibold text-sm">Mara Vaillard</div>
+<div class="text-xs text-gray-500">2025-02-19</div>
+</div>
+</div>
+<div class="text-yellow-400 text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-300">We booked two tours, one to Arraial do Cabo and another a train tour of Rio de Janeiro, and in both cases they delivered on everything promised. It was a rewarding and fun experience, with impeccable organization. We would definitely choose them again.</p>
+</div>
+<div class="testimonial-card p-6 rounded-2xl opacity-50">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center font-bold">K</div>
+<div>
+<div class="font-semibold text-sm">Kari R</div>
+<div class="text-xs text-gray-500">2025-01-24</div>
+</div>
+</div>
+<div class="text-brand-green text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-300 font-semibold mb-1">Excellent experience</p>
+<p class="text-sm text-gray-400">! Super punctual, responsible, good price, and both the guide and the staff were very friendly, I recommend them 100%.</p>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="space-y-6">
+<div class="testimonial-card p-6 rounded-2xl">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="User" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH49uBOkaUe24c_M336Rn0xvKCueLHhnBFmxbsKJ0aOSZ9eNKPdqW463w5Z4l6Jp7B1cLkXCJxKnVOQDuw33cUeby-1YnPCx-_bx7RF3cxwQ7L1NazKH3vWSN_dn7KGu4_uCAa8IV_H7YOsJJLPJIj8HgiWpyMYCSQtl17_S4ML6-yVeOspjNBCgKsodeQs5qlvaMHo2gQH5VAyhGfadRpLwGddtc82lZURLHd3Fd0H7eUvpTmt-rOMzmJA8Cyi7NCkLYUT6R36t8"/>
+<div>
+<div class="font-semibold text-sm">Susana Mirta Cabrera</div>
+<div class="text-xs text-gray-500">2025-02-25</div>
+</div>
+</div>
+<div class="text-yellow-400 text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-300">Excellent service, very friendly from the first contact. They fulfilled everything agreed upon. And our guide Michelle was the best!</p>
+</div>
+<div class="testimonial-card p-6 rounded-2xl opacity-50">
+<div class="flex items-center space-x-3 mb-4">
+<img alt="User" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq1sTIG0rpoHO4P4x5TqonVUndam8fksPjNimyB9tNwuSQfIY1eOqpxB07JUYkDn25XWGwziYO5d20d5ZLALo_02xQVtE7E5FB0yQ9qe0zDwHRT2XdoMyokg-6_uhH_wDoyjLoje28y-xSrCnCILo5szbTf-cS5why_F0mVGZ_ElvMjBsj1YvttklDfW2EToyDM-egqPIiPZIrBi3aEYMFR2DG6RzLjkEA7zt--40rjUTFKlHylyLkiQ3UZk-ZZEkViQI_O91edK8"/>
+<div>
+<div class="font-semibold text-sm">Sergio Fernández</div>
+<div class="text-xs text-gray-500">2025-02-15</div>
+</div>
+</div>
+<div class="text-yellow-400 text-xs mb-3">★★★★★</div>
+<p class="text-sm text-gray-400">A very nice experience...everything was lovely and the guide was very friendly and excellent 👍 helpful 😊</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12 space-x-12">
+<div class="text-center">
+<div class="text-xs font-bold tracking-wider mb-1">EXCELLENT</div>
+<div class="text-yellow-400 text-sm mb-1">★★★★★</div>
+<div class="text-xs text-gray-400 mb-2">Based on <span class="text-white font-semibold">112 reviews</span></div>
+<img alt="Google" class="h-5 mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCny9ET9A04BIt11X0dBr4PsGbwbymLVyc3CRlxRWjFRUSrQVa5y-E5M-oknKa_ORFQl7_LCR3gkTLAGjmKD2H0BPeD7r6fQyfoSwB5KaJ23bHGX9KLLTfLxDrg5iVO2DdF7eZnP5EHNoICFrd7l0-SsQLVPl0YnuIpQwImb9MLFWt-j--jkZPw6gFSMGJp7e53JBjbPZV9EKz0yKcToeWj3Tzoqsfr6GbYc_-KWmsABrUziEtL8y_sXCfqpG9p2gK7OCHgXuXIuEg"/>
+</div>
+<div class="text-center">
+<div class="text-xs font-bold tracking-wider mb-1">EXCELLENT</div>
+<div class="text-brand-green text-sm mb-1">★★★★★</div>
+<div class="text-xs text-gray-400 mb-2">Based on <span class="text-white font-semibold">161 reviews</span></div>
+<img alt="TripAdvisor" class="h-5 mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEyujGXnK5JeujmblsR3NbglqIfUL93cnQZGpvm-A1mNMkIWPedkvHaaOx7emMWdHabvzdy5j0mybaeKxvTGLNiFdC7JbgmFDeFml9elH0zCMFGJyCEj9mpotrzgXdz8qsfbX49hqFHyIRka5MEYSKSv_fBck25v0bNjqK0uguOQJ2xlbfwrCTPozNBfi3HsDMgiuvdzHNRhNVz2ymlBguRthbvkADS-Pr1ENLuCbBmM48VDJbmxtNhvLLA7vlTED30V8HSqSWNQs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Testimonials Section -->
+<!-- BEGIN: Endorsed Logos -->
+<section class="bg-brand-gray py-8 border-y border-gray-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 opacity-60">
+<div class="text-lg font-display">
+        Endorsed <span class="font-bold text-white">by the</span><br/>
+<span class="font-bold text-white">following</span> organisms
+      </div>
+<img alt="Buzios Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_S1VW2iIFpQ3kcxsO8UVh3wQLGq8q-tYbWj0k0qVCb8z72O6Kq2Sx7At8Zwfxr0GlIMWHRPVLTuCwHSDJz2RJKyM8DpHmnt7tLuJ9GQ-P947Vyacax_J-RNz2FCz_clZxSFOi4eJAcIldb041Yx5c5R8DVwavKn2ydnO8Ovc9RHXo0K85hxiWsPQJ47Ce2dCt51Ygml_G3AtFImif-EEGPWvreacglq3PSzIKvxeFXLKkijw5CAolosNVj3cYnmHOtH-WG19Tg04"/>
+<img alt="Cabo Frio Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1NZulErURhMwDOYlijxFqzmBfdQS6R6ihqqKCke0E04N4o1hOtHgo5JHohrE8WvHW1St5GVNIoJo-jij12rApWZivyG-L4BI6kxANH4bBBSSn0ksvM47YsJUKxlGx9LSkRumrv65xglaio2zwThxNSDGj_iUb-DyN4jdPpf_vrq-H94X3genOGXOm8tl9uUWgJucNh4ZPJAUg9xlK5KbN-Hxn1UUeU4KRv23rFGdn35Bnp27NAlR72FTKRfK9jz1DKp-uvE1Pb38"/>
+<img alt="Arraial Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfVtivzfxmMO36uEg8Y--WbN5gPuuHJTanMoYsrPMEawDKtn6MNRkjwnGAde6cpXNYppY-Xi4_zDfSq3Z6-dhwQmzrgAcZ0Op1DQLmYsBl4kfOY3CdRCRHZOdFibfQYU_8N0cmtjnC0hCLN1B6nUW5FbeOHZrWH7Lfz6XFsjtYYNZNDe97XcqGn6oWWVBYN36BBzY3XC5NtX-Ma1tKRi_49NtAB3siG8CapMzBtD9VnDNu__4RBmsQXiezZ_f0h42JNnVDaxxj6kk"/>
+<img alt="Cadastur Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnTEEhfhwsVBdyNVapzbaniMfM5FepMl17ELLsiEyh06-Dv6pYizLXHhi5s3zeIccYoaO3fe1R1fwt_TqxIYGIPKXhpWkJOSt910AG4b6WaTBLJsDS1D-SgVhysBZE5YlYn1VYPToxW66oXC0ir7xZi8OlrEpYVUd5vmkXAqTt8ZewiwqJ1S0FYfEjQraJGRVt8wWIREBS2Kdz1mTuEupk77KZ6chaFbBHi-n-SszMPBd1Q6Vg0lU_q6Dhz5a9VEUEiWhMHIZxG_s"/>
+</div>
+</section>
+<!-- END: Endorsed Logos -->
+<!-- BEGIN: Footer Area Wrapper (Includes 'Because Choose us') -->
+<footer class="bg-[#1c1c1f] pt-20">
+<!-- Why Choose Us Content -->
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 bg-white text-gray-800 rounded-3xl p-12">
+<div class="relative hidden md:block">
+<!-- Decorative circle mask image placeholder -->
+<div class="absolute inset-0 bg-[url('https://placehold.co/600x800/87ceeb/333?text=Rio+Coast')] bg-cover bg-center rounded-l-full"></div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 rounded-full border-8 border-white overflow-hidden shadow-xl z-10">
+<img alt="Selaron Steps" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWn9X5wpYxLy7DnL861ha1OYYlYIh_sZ9Z1reKDSmP2BQ1CVs7OPqggcJ_y7GbphH7ZpJNSWosHheI1migxlruDqrLysbiNFY0PISta3wEARim7PfSumBc9PsVoOvvVhv2yrIbRZQK23TN6MpyqEWr4fHP_4Nt3zHDS5cAE6vY3CL7eSUVDqFogJEyCwAAc_4RCCuujEpt-ve5yLDtIv1egVq5A1PcX4EEApfcZeKFWCIcMQgnU1KuSKlcHtml17YsG9iHyhfAUpA"/>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-4xl font-display font-bold text-black">Because <span class="font-normal text-gray-500">Choose us?</span></h2>
+<p class="text-sm text-gray-600">We are an inbound tourism agency offering transfer services, regular tours, and private tours throughout the Rio de Janeiro region. We serve both end consumers and international agencies seeking a local partner to cater to their passengers.</p>
+<div>
+<h3 class="text-lg font-bold text-black mb-2">Our story</h3>
+<p class="text-sm text-gray-600">With the goal of helping others discover Rio de Janeiro, we founded Rio Imperio Turismo in 2017. Today, with a team of over 15 people taking care of every detail, we have established ourselves as a travel agency that stands out for its excellent customer service; we inspire confidence, provide respect, and offer support to the hundreds of travelers who contact us every day. Furthermore, with our aim to be agents of change, we have taken on the task of setting trends in the city. This demands great responsibility, discipline, and commitment.</p>
+</div>
+<div>
+<h3 class="text-lg font-bold text-black mb-2">Trust and responsibility</h3>
+<p class="text-sm text-gray-600">We have dedicated time and effort to finding and selecting the companies that work with us. And we chose them according to the highest criteria... our own. Because we work every day as if it were the first, knowing that we would love to meet people like us anywhere in the world, spreading joy, conveying respect for tourism and the environment, and above all, upholding such noble values as trust, responsibility, and truth.</p>
+</div>
+<div>
+<h3 class="text-lg font-bold text-black mb-2">Wide variety</h3>
+<p class="text-sm text-gray-600">Over the years, we have developed a portfolio of services designed to include tours and experiences that blend culture, stunning locations, and breathtaking landscapes. We also offer personalized activities tailored to each client's preferences and budget, always adhering to the high standards and quality they deserve.</p>
+</div>
+</div>
+</div>
+<!-- Actual Footer Links -->
+<div class="bg-brand-dark pt-16 pb-8 border-t border-gray-800">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<!-- Branding -->
+<div class="space-y-4">
+<div class="text-2xl font-bold text-white tracking-tighter">RIO IMPERIO<br/><span class="text-xs text-gray-500 font-normal">TURISMO</span></div>
+<p class="text-xs text-gray-400 pr-8">A travel agency that stands out for its excellent customer service</p>
+<div class="flex space-x-4 pt-2">
+<a class="text-gray-400 hover:text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+<a class="text-gray-400 hover:text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"></path></svg></a>
+</div>
+</div>
+<!-- Company -->
+<div>
+<h4 class="text-white font-semibold mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-brand-gold" href="#">About us</a></li>
+<li><a class="hover:text-brand-gold" href="#">Traveler information</a></li>
+<li><a class="hover:text-brand-gold" href="#">Why choose us?</a></li>
+</ul>
+</div>
+<!-- Explore -->
+<div>
+<h4 class="text-white font-semibold mb-4">Explore</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-brand-gold" href="#">Tours</a></li>
+<li><a class="hover:text-brand-gold" href="#">FAQ</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-white font-semibold mb-4">Contact information</h4>
+<div class="space-y-4 text-sm text-gray-400">
+<div class="flex items-start space-x-3">
+<svg class="w-5 h-5 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div>
+<div class="font-medium text-gray-300">Phone</div>
+<div>+55 21 96099 4974</div>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<svg class="w-5 h-5 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div>
+<div class="font-medium text-gray-300">E-mail</div>
+<div>reservasrioimperio@gmail.com</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<div>Copyright © 2025 RioImperio Tourism. All rights reserved.</div>
+<div class="space-x-4 mt-4 md:mt-0">
+<a class="hover:text-gray-300" href="#">Privacy Policy</a>
+<a class="hover:text-gray-300" href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer Area Wrapper -->
+<!-- Fixed WhatsApp Button -->
+<a class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition z-50" href="#">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.786 5.768.019 3.181 2.605 5.767 5.786 5.767 3.18 0 5.766-2.585 5.785-5.767-.019-3.182-2.605-5.768-5.785-5.768zm3.333 8.333c-.152.417-.79.793-1.077.838-.285.045-.632.14-1.897-.378-1.52-.619-2.483-2.18-2.559-2.28-.076-.1-.608-.813-.608-1.55s.38-1.103.513-1.236c.133-.133.285-.171.38-.171.095 0 .19.01.275.01.086 0 .21-.039.324.238.123.305.418 1.028.455 1.104.038.076.057.171.01.266-.048.095-.076.152-.152.247-.076.095-.162.19-.228.275-.076.086-.162.181-.067.343.095.162.427.704.912 1.141.625.56 1.16.732 1.32.808.162.076.257.067.352-.038.095-.105.418-.485.532-.656.114-.171.228-.143.37-.086.143.057.912.428 1.064.504.152.076.256.114.294.181.038.067.038.39-.114.808zm-3.333-12.838c-5.32 0-9.643 4.322-9.643 9.643 0 1.696.444 3.353 1.288 4.815l-1.378 5.034 5.152-1.35c1.417.771 3.013 1.176 4.633 1.176h.004c5.319 0 9.641-4.323 9.641-9.643 0-5.32-4.323-9.643-9.643-9.643zm0 17.657h-.003c-1.442 0-2.856-.388-4.093-1.121l-.293-.174-3.044.798.814-2.969-.191-.304c-.806-1.282-1.231-2.766-1.231-4.296 0-4.402 3.582-7.983 7.987-7.983 4.404 0 7.986 3.58 7.986 7.983 0 4.403-3.582 7.983-7.986 7.983z"></path></svg>
+</a>
+</body></html>
