@@ -12,6 +12,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FAQModal from './components/FAQModal';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollReveal from './components/ScrollReveal';
 
 function App() {
   const [faqOpen, setFaqOpen] = useState(false);
@@ -25,29 +26,43 @@ function App() {
       <Header />
       
       <main className="flex-grow">
-        {/* 3. Hero Section */}
+        {/* 3. Hero Section (visible immediately, uses onload animation) */}
         <Hero />
         
-        {/* 4. Search Filter Bar */}
-        <SearchBar />
+        {/* 4. Search Filter Bar (wrapped in ScrollReveal) */}
+        <ScrollReveal>
+          <SearchBar />
+        </ScrollReveal>
         
         {/* 5. Animated Counter Stats */}
-        <Stats />
+        <ScrollReveal>
+          <Stats />
+        </ScrollReveal>
         
         {/* 6. Tours Carousel Slider */}
-        <ToursCarousel />
+        <ScrollReveal>
+          <ToursCarousel />
+        </ScrollReveal>
         
         {/* 7. About Us Company History */}
-        <AboutUs />
+        <ScrollReveal>
+          <AboutUs />
+        </ScrollReveal>
         
         {/* 8. Auto-sliding Testimonials */}
-        <TestimonialsCarousel />
+        <ScrollReveal>
+          <TestimonialsCarousel />
+        </ScrollReveal>
         
         {/* 9. Brand Endorsements */}
-        <EndorsedLogos />
+        <ScrollReveal>
+          <EndorsedLogos />
+        </ScrollReveal>
         
         {/* 10. Underline-Style Contact Form */}
-        <ContactSection />
+        <ScrollReveal>
+          <ContactSection />
+        </ScrollReveal>
       </main>
       
       {/* 11. Redesigned Footer (handles modal click) */}
