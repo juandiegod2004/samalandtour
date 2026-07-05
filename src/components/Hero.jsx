@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import heroBg from '../assets/images/cabo-san-juan.png';
 import tayronaVideo from '../assets/videos/video-tayrona.mp4';
-import tayronaMobileVideo from '../assets/videos/tayrona-mobile.MOV';
+import tayronaMobileVideo from '../assets/videos/tayrona-mobile.mp4';
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
