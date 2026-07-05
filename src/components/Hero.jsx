@@ -42,11 +42,13 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen md:h-screen flex items-center pt-28 md:pt-20 pb-16 md:pb-0 overflow-hidden" id="inicio">
+    <section className="relative min-h-screen md:h-screen flex items-center pt-28 md:pt-20 pb-16 md:pb-0 overflow-hidden bg-neutral" id="inicio">
       
-      {/* Background Image / Video Fallback (Always visible behind video) */}
+      {/* Background Image / Video Fallback */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 z-0"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 z-0 ${
+          videoReady ? 'opacity-0' : 'opacity-40'
+        }`}
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
