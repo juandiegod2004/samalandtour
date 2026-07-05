@@ -6,6 +6,7 @@ import tayronaMobileVideo from '../assets/videos/tayrona-mobile.MOV';
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -29,7 +30,11 @@ export default function Hero() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Reset video ready state when video source changes
   const videoSource = isMobile ? tayronaMobileVideo : tayronaVideo;
+  useEffect(() => {
+    setVideoReady(false);
+  }, [videoSource]);
 
   const tags = [
     "Aventura", "Parque Tayrona", "Bahía Concha", "Playa Cristal", 
@@ -38,25 +43,36 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen md:h-screen flex items-center pt-28 md:pt-20 pb-16 md:pb-0 overflow-hidden" id="inicio">
+      
+      {/* Background Image / Video Fallback (Always visible behind video) */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 z-0"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+
       {/* Full HD Background Video / Mobile Video */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-10 overflow-hidden">
         <video 
           key={videoSource}
           autoPlay 
           loop 
           muted 
           playsInline 
-          poster={heroBg}
-          className="w-full h-full object-cover opacity-45"
+          preload="auto"
+          onPlay={() => setVideoReady(true)}
+          onLoadedData={() => setVideoReady(true)}
+          className={`w-full h-full object-cover transition-opacity duration-1000 ${
+            videoReady ? 'opacity-45' : 'opacity-0'
+          }`}
         >
           <source src={videoSource} />
           Your browser does not support the video tag.
         </video>
         {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral via-neutral/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral via-neutral/85 to-transparent z-20" />
       </div>
       
-      <div className="max-w-[1440px] mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col md:flex-row justify-between items-center gap-12 pt-8 md:pt-0">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20 relative z-30 w-full flex flex-col md:flex-row justify-between items-center gap-12 pt-8 md:pt-0">
         {/* Left Side Content */}
         <div className="w-full md:w-1/2 space-y-6 md:space-y-8 text-white">
           <span className="inline-block border border-secondary/40 text-secondary text-xs font-body font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full bg-secondary/5">
