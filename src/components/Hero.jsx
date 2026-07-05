@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import heroBg from '../assets/images/cabo-san-juan.png';
 import tayronaVideo from '../assets/videos/video-tayrona.mp4';
+import tayronaMobileVideo from '../assets/videos/tayrona-mobile.MOV';
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -18,6 +20,17 @@ export default function Hero() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const videoSource = isMobile ? tayronaMobileVideo : tayronaVideo;
+
   const tags = [
     "Aventura", "Parque Tayrona", "Bahía Concha", "Playa Cristal", 
     "Cabo San Juan", "Ecoturismo", "Camping de Lujo", "Transfers Privados"
@@ -25,9 +38,10 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen flex items-center pt-20 overflow-hidden" id="inicio">
-      {/* Full HD Background Video */}
+      {/* Full HD Background Video / Mobile Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video 
+          key={videoSource}
           autoPlay 
           loop 
           muted 
@@ -35,7 +49,7 @@ export default function Hero() {
           poster={heroBg}
           className="w-full h-full object-cover opacity-45"
         >
-          <source src={tayronaVideo} type="video/mp4" />
+          <source src={videoSource} />
           Your browser does not support the video tag.
         </video>
         {/* Dark Overlay Gradient */}
